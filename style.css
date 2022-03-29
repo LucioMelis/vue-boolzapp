@@ -1,0 +1,34 @@
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+/* Utente Sofia */
+.lm-bg-sofia{
+    background-color: #eaeaea;
+}
+
+i{
+    color:#b1b1b1;
+}
+/* Blocco Notifiche */
+.lm-bg-notifiche{
+    background-color: #8edafc;
+}
+
+.lm-icon{
+    height: 40px;
+    width: 40px;
+    background-color: white;
+}
+
+.fa-bell-slash{
+    color:#8edafc;
+}
+/* Blocco input */
+.lm-input{
+    background-color: #f9f9f9;
+}
+
+.lm-p{
+    font-size: 15px;
+}
