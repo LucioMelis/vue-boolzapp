@@ -2,6 +2,7 @@ h1,h2,h3,h4,h5,h6,p{
     margin: 0;
     padding: 0;
 }
+
 /* Utente Sofia */
 .lm-bg-sofia{
     background-color: #eaeaea;
@@ -31,4 +32,12 @@ i{
 
 .lm-p{
     font-size: 15px;
+}
+
+.lm-img{
+    width: 50px;
+}
+
+.lm-img-contact{
+    width: 60px;
 }

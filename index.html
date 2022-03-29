@@ -21,9 +21,9 @@
 </head>
 
 <body>
-    <div id="root" class="container-fluid">
+    <div id="root" class="container">
 
-        <div class="row">
+        <div class="row border">
             <!------------- Blocco Generale contatti --------------->
             <div class="col-5">
                 <!-- Utente Sofia  -->
@@ -31,20 +31,20 @@
 
                     <div class="col-3 d-flex align-items-center py-2">
                         <div>
-                            <img class="w-50 rounded-circle" src="img/avatar_io.jpg" alt="Sofia">
-                            <span>Sofia</span>
+                            <img class="lm-img rounded-circle" src="img/avatar_io.jpg" alt="Sofia">
+                            <span class="fw-bold">Sofia</span>
                         </div>
                     </div>
 
                     <div class="col-4 d-flex justify-content-end py-2">
-                        <i class="fa-solid fa-circle-notch me-2"></i>
-                        <i class="fa-solid fa-message me-2"></i>
-                        <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+                        <i class="fa-solid fa-circle-notch me-2 fa-xl"></i>
+                        <i class="fa-solid fa-message me-2 fa-xl"></i>
+                        <i class="fa-solid fa-ellipsis-vertical me-2 fa-xl"></i>
                     </div>
 
                 </div>
                 <!-- Blocco Notifiche  -->
-                <div class="row lm-bg-notifiche py-3">
+                <div class="row lm-bg-notifiche py-2">
                     <div class="col-2 d-flex justify-content-center align-items-center">
                         <div class="lm-icon rounded-circle d-flex justify-content-center align-items-center">
                             <i class="fa-solid fa-bell-slash fa-xl"></i>
@@ -62,18 +62,18 @@
                     </div>
                 </div>
                 <!--********************** Blocco Contact ******************* -->
-                <div class="row  border border-dark" v-for="contatti in contacts">
+                <div class="row border-top border-bottom" v-for="contatti in contacts">
                     <!-- Immagine Utente  -->
-                    <div class="col-2 d-flex align-items-center py-2">
+                    <div class="col-2 d-flex align-items-center py-1">
                         <div>
-                            <img class="w-100 rounded-circle" :src="imgURLAvatar(contatti)" alt="Sofia">
+                            <img class="lm-img-contact rounded-circle" :src="imgURLAvatar(contatti)" alt="Sofia">
                         </div>
                     </div>
                     <!-- Nome Utente  -->
                     <div class="col-8">
                         <div>
-                            <h5 class="pt-1">{{contatti.name}}</h3>
-                                <p class="text-secondary lm-p">Ultimo messaggio inviato</p>
+                            <h5 class="pt-1">{{contatti.name}}</h5>
+                            <p class="text-secondary lm-p">Ultimo messaggio inviato</p>
                         </div>
                     </div>
                     <!-- Orario Utente  -->
@@ -83,13 +83,35 @@
                 </div>
             </div>
             <!---------------------- Blocco Generale Chat ----------------->
-            <div class="col-7">
+            <div class="col-7 border-start">
+                <!-- Blocco Chat Utente  -->
+                <div class="row align-items-center justify-content-between lm-bg-sofia">
+
+                    <div class="col-5 py-2 d-flex">
+                        <div>
+                            <img class="lm-img rounded-circle" src="img/avatar_io.jpg" alt="Sofia">
+                        </div>
+                        <div>
+                            <h5 class="pt-1">Michele</h5>
+                            <p class="text-secondary lm-p">Ultimo accesso oggi alle 12:00</p>
+                        </div>
+                    </div>
+
+                    <div class="col-4 d-flex justify-content-end py-2">
+                        <i class="fa-solid fa-magnifying-glass me-2 fa-xl"></i>
+                        <i class="fa-solid fa-paperclip me-2 fa-xl"></i>
+                        <i class="fa-solid fa-ellipsis-vertical me-2 fa-xl"></i>
+                    </div>
+
+                </div>
 
             </div>
 
         </div>
 
     </div>
+
+
     <script src="script.js"></script>
 </body>
 
