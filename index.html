@@ -61,18 +61,18 @@
                         <input class="w-100" type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                 </div>
-                <!--****** Blocco Contact ******* -->
-                <div class="row  border border-dark">
+                <!--********************** Blocco Contact ******************* -->
+                <div class="row  border border-dark" v-for="contatti in contacts">
                     <!-- Immagine Utente  -->
                     <div class="col-2 d-flex align-items-center py-2">
                         <div>
-                            <img class="w-100 rounded-circle" src="img/avatar_io.jpg" alt="Sofia">
+                            <img class="w-100 rounded-circle" :src="imgURLAvatar(contatti)" alt="Sofia">
                         </div>
                     </div>
                     <!-- Nome Utente  -->
                     <div class="col-8">
                         <div>
-                            <h5 class="pt-1">Michele</h3>
+                            <h5 class="pt-1">{{contatti.name}}</h3>
                                 <p class="text-secondary lm-p">Ultimo messaggio inviato</p>
                         </div>
                     </div>
@@ -80,16 +80,17 @@
                     <div class="col-2 d-flex justify-content-end">
                         <p class="text-secondary lm-p">12:00</p>
                     </div>
-
-
-                </div>
-                <!---------------------- Blocco Generale Chat ----------------->
-                <div class="col-7">
-
                 </div>
             </div>
+            <!---------------------- Blocco Generale Chat ----------------->
+            <div class="col-7">
+
+            </div>
+
         </div>
-        <script src="script.js"></script>
+
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

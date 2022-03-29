@@ -1,6 +1,6 @@
 console.log('Js Ok');
 
-contacts: [
+const contacts = [
     {
         name: 'Michele',
         avatar: '_1',
@@ -163,3 +163,18 @@ contacts: [
         ],
     }
 ]
+
+const app = new Vue({
+    el: '#root',
+    data: {
+        contacts,
+    },
+    methods: {
+        imgURLAvatar(avatarContatti) {
+            return `img/avatar${avatarContatti.avatar}.jpg`
+        }
+    }
+})
+
+
+// img/avatar_io.jpg
