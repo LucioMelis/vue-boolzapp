@@ -5,6 +5,11 @@ h1,h2,h3,h4,h5,h6,p{
 
 body{
     background-color:#009688;
+    display: flex;
+}
+
+body,html{
+    height: 100%;
 }
 
 /* Utilities */
@@ -23,6 +28,7 @@ body{
 
 .lm-bg-contatti{
     background-color: white;
+    
 }
 
 /* Utente Sofia */
@@ -67,3 +73,12 @@ i{
 .lm-bg-sfondo{
     background-image: url(img/mine.jpg);
 }
+
+.lm-bg-newmessage{
+    background-color: #f3eeea;
+}
+
+.lm-chat{
+    height: calc(100% - 143px);
+}
+

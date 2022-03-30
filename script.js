@@ -177,4 +177,3 @@ const app = new Vue({
 })
 
 
-// img/avatar_io.jpg
