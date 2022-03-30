@@ -191,7 +191,6 @@ const app = new Vue({
                 return 'inviati'
             }
         },
-
         visualizzaMessaggi(messaggi) {
             const messaggio = messaggi.message;
             return messaggio
