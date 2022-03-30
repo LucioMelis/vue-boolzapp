@@ -81,7 +81,7 @@
                     <div class="col-8">
                         <div>
                             <h5 class="pt-1">{{contatti.name}}</h5>
-                            <p class="text-secondary lm-p">{{contatti.messages[contatti.messages.length-1].message}}</p>
+                            <p class="text-secondary lm-p">{{ultimoMessaggio(contatti.messages)}}</p>
                         </div>
                     </div>
                     <!-- Orario Utente  -->
@@ -115,7 +115,9 @@
                 </div>
                 <!-- Blocco Chat  -->
                 <div class="row lm-chat flex-column">
-                    <div class="lm-msg col-5">Ciao</div>
+                    <div class="lm-msg col-5" v-for="messaggi in contacts[indiceContatto].messages">
+                        {{visualizzaMessaggi(messaggi)}}
+                    </div>
                 </div>
 
                 <!-- Blocco Nuovi Messaggi  -->

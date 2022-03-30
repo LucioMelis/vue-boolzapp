@@ -180,6 +180,14 @@ const app = new Vue({
         },
         immagineRandom(avatar) {
             return `img/avatar${avatar}.jpg`
+        },
+        ultimoMessaggio(oggettoMessaggi) {
+            return oggettoMessaggi[oggettoMessaggi.length - 1].message
+        },
+        visualizzaMessaggi(messaggi) {
+            const messaggio = messaggi.message;
+            const status = messaggi.status;
+            console.log(messaggio, status);
         }
     }
 })
