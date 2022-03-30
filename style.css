@@ -79,6 +79,24 @@ i{
 }
 
 .lm-chat{
-    height: calc(100% - 143px);
+    height: calc(100% - 150px);
+}
+
+/* Proprietà Js  */
+
+.lm-msg{
+    margin: 20px 10px;
+    padding: 10px 15px;
+    border:1px solid black;
+    border-radius: 10px;
+}
+
+.inviati{
+    background-color: #d5f9ba;
+    align-self: flex-end;
+}
+
+.ricevuti{
+    background-color: #ffffff;    
 }
 
