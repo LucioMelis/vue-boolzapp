@@ -25,7 +25,7 @@
 
         <div class="row border">
             <!------------- Blocco Generale contatti --------------->
-            <div class="col-5">
+            <div class="col-5 lm-bg-contatti">
                 <!-- Utente Sofia  -->
                 <div class="row justify-content-between align-items-center lm-bg-sofia">
 
@@ -57,12 +57,18 @@
                 </div>
                 <!-- Blocco input  -->
                 <div class="row">
-                    <div class="col-12 py-2 lm-input">
-                        <input class="w-100" type="text" placeholder="Cerca o inizia una nuova chat">
+                    <div class="col-12 py-2 lm-input d-flex">
+                        <div class="input-group">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon1">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <input type="text" class="form-control" placeholder=""
+                                aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        </div>
                     </div>
                 </div>
-                <!--********************** Blocco JS Contact ******************* -->
-                <div class="row border-top" v-for="contatti in contacts">
+                <!--******* Blocco JS Contact ****** -->
+                <div class="row border-top lm-cursor" v-for="contatti in contacts">
                     <!-- Immagine Utente  -->
                     <div class="col-2 d-flex align-items-center py-1">
                         <div>
@@ -106,8 +112,7 @@
                 </div>
                 <!-- Blocco Chat  -->
                 <div class="row">
-                    <div class="col-6"></div>
-                    <div class="col-6"></div>
+
                 </div>
 
 
