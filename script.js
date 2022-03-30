@@ -184,10 +184,17 @@ const app = new Vue({
         ultimoMessaggio(oggettoMessaggi) {
             return oggettoMessaggi[oggettoMessaggi.length - 1].message
         },
+        aggiungiClasse(status) {
+            if (status === 'received') {
+                return 'ricevuti'
+            } else {
+                return 'inviati'
+            }
+        },
+
         visualizzaMessaggi(messaggi) {
             const messaggio = messaggi.message;
-            const status = messaggi.status;
-            console.log(messaggio, status);
+            return messaggio
         }
     }
 })
