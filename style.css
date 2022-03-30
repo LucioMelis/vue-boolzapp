@@ -3,6 +3,20 @@ h1,h2,h3,h4,h5,h6,p{
     padding: 0;
 }
 
+/* Utilities */
+.lm-p{
+    font-size: 15px;
+}
+
+.lm-img{
+    width: 50px;
+}
+
+.lm-img-contact{
+    width: 60px;
+}
+/***  Blocco Generale contatti ****/
+
 /* Utente Sofia */
 .lm-bg-sofia{
     background-color: #eaeaea;
@@ -30,14 +44,8 @@ i{
     background-color: #f9f9f9;
 }
 
-.lm-p{
-    font-size: 15px;
-}
+/***** Blocco Generale Chat *****/
 
-.lm-img{
-    width: 50px;
-}
-
-.lm-img-contact{
-    width: 60px;
+.lm-bg-sfondo{
+    background-image: url(img/mine.jpg);
 }
