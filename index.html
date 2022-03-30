@@ -67,19 +67,21 @@
                         </div>
                     </div>
                 </div>
-                <!--******* Blocco JS Contact ****** -->
-                <div class="row border-top lm-cursor" v-for="contatti in contacts">
+                <!--******************** Blocco JS Contact ******************** -->
+                <div class="row border-top lm-cursor" v-for="(contatti,index) in contacts"
+                    @click="attivaContatto(index)">
                     <!-- Immagine Utente  -->
                     <div class="col-2 d-flex align-items-center py-1">
                         <div>
-                            <img class="lm-img-contact rounded-circle" :src="imgURLAvatar(contatti)" alt="Sofia">
+                            <img class="lm-img-contact rounded-circle" :src="imgURLAvatar(contatti)"
+                                :alt="contatti.name">
                         </div>
                     </div>
                     <!-- Nome Utente  -->
                     <div class="col-8">
                         <div>
                             <h5 class="pt-1">{{contatti.name}}</h5>
-                            <p class="text-secondary lm-p">Ultimo messaggio inviato</p>
+                            <p class="text-secondary lm-p">{{contatti.messages[contatti.messages.length-1].message}}</p>
                         </div>
                     </div>
                     <!-- Orario Utente  -->
@@ -95,10 +97,11 @@
 
                     <div class="col-5 py-2 d-flex">
                         <div>
-                            <img class="lm-img rounded-circle" src="img/avatar_io.jpg" alt="Sofia">
+                            <img class="lm-img rounded-circle" :src="immagineRandom(contacts[indiceContatto].avatar)"
+                                alt="">
                         </div>
                         <div>
-                            <h5 class="pt-1">Michele</h5>
+                            <h5 class="pt-1">{{contacts[indiceContatto].name}}</h5>
                             <p class="text-secondary lm-p">Ultimo accesso oggi alle 12:00</p>
                         </div>
                     </div>

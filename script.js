@@ -168,10 +168,18 @@ const app = new Vue({
     el: '#root',
     data: {
         contacts,
+        indiceContatto: 0,
     },
     methods: {
         imgURLAvatar(avatarContatti) {
             return `img/avatar${avatarContatti.avatar}.jpg`
+        },
+        attivaContatto(index) {
+            this.indiceContatto = index;
+            console.log(this.indiceContatto)
+        },
+        immagineRandom(avatar) {
+            return `img/avatar${avatar}.jpg`
         }
     }
 })
