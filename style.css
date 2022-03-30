@@ -84,6 +84,12 @@ i{
     flex-grow: 1;
 }
 
+/* Input Chat  */
+.lm-btn{
+    background-color:#009688 ;
+    color: white;
+}
+
 /* Proprietà Js  */
 
 .lm-msg{
