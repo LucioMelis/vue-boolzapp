@@ -204,9 +204,11 @@ const app = new Vue({
                 message: this.testoInserito,
                 status: 'sent'
             }
-            oggettoIndicizzato.push(nuovoMessaggio);
-            this.testoInserito = '';
-            setTimeout(this.rispostaAlMessaggio, 1000);
+            if (this.testoInserito.length > 0) {
+                oggettoIndicizzato.push(nuovoMessaggio);
+                this.testoInserito = '';
+                setTimeout(this.rispostaAlMessaggio, 1000);
+            }
         },
         rispostaAlMessaggio() {
             const rispondi = {
@@ -236,6 +238,5 @@ const app = new Vue({
             let ss = String(today.getSeconds()).padStart(2, '0');
             return today = hh + ':' + mm + ':' + ss;
         }
-
     }
 })
