@@ -169,7 +169,8 @@ const app = new Vue({
     data: {
         contacts,
         indiceContatto: 0,
-        testoInserito: ''
+        testoInserito: '',
+        ricercaUtente: ''
     },
     methods: {
         imgURLAvatar(avatarContatti) {
@@ -215,6 +216,9 @@ const app = new Vue({
             }
             this.contacts[this.indiceContatto].messages.push(rispondi);
         },
+        utenteRicercato() {
+            console.log(this.ricercaUtente);
+        }
     }
 })
 
