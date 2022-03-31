@@ -115,10 +115,12 @@
 
                 </div>
                 <!-- Blocco Chat  -->
-                <div class="row lm-chat flex-column">
-                    <div class="lm-msg col-5" v-for="messaggi in contacts[indiceContatto].messages"
-                        :class="aggiungiClasse(messaggi.status)">
-                        {{visualizzaMessaggi(messaggi)}}
+                <div class="row">
+                    <div class="d-flex lm-chat flex-column">
+                        <div class="lm-msg col-5" v-for="messaggi in contacts[indiceContatto].messages"
+                            :class="aggiungiClasse(messaggi.status)">
+                            {{visualizzaMessaggi(messaggi)}}
+                        </div>
                     </div>
                 </div>
 

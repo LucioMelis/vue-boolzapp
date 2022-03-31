@@ -14,10 +14,6 @@ body,html{
     width: 100%;
 }
 
-.lm-height{
-    height: 80vh;
-}
-
 /* Utilities */
 .lm-p{
     font-size: 15px;
@@ -86,7 +82,7 @@ i{
 
 .lm-chat{
     overflow-y: scroll;
-    flex-grow: 1;
+    height: 600px;
 }
 
 
