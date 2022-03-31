@@ -169,6 +169,7 @@ const app = new Vue({
     data: {
         contacts,
         indiceContatto: 0,
+        testoInserito: ''
     },
     methods: {
         imgURLAvatar(avatarContatti) {
@@ -194,7 +195,18 @@ const app = new Vue({
         visualizzaMessaggi(messaggi) {
             const messaggio = messaggi.message;
             return messaggio
+        },
+        inserisciNuovoMessaggio(oggettoIndicizzato) {
+            // console.log(oggettoIndicizzato);
+            const nuovoMessaggio = {
+                date: '10/01/2020 15:51:00',
+                message: this.testoInserito,
+                status: 'sent'
+            }
+            oggettoIndicizzato.push(nuovoMessaggio);
+            this.testoInserito = '';
         }
+
     }
 })
 
