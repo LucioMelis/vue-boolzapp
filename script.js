@@ -222,7 +222,7 @@ const app = new Vue({
             this.contacts.forEach(element => {
                 const nomi = element.name.toLowerCase();
                 console.log(nomi)
-                element.visible = nomi.includes(this.ricercaUtente);
+                element.visible = nomi.includes(this.ricercaUtente.toLowerCase());
             });
         },
         ultimaDataOrario(oggettoMessaggi) {
