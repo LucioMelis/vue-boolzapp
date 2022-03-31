@@ -218,7 +218,7 @@ const app = new Vue({
         },
         utenteRicercato() {
             this.contacts.forEach(element => {
-                const nomi = element.name;
+                const nomi = element.name.toLowerCase();
                 console.log(nomi)
                 element.visible = nomi.includes(this.ricercaUtente);
             });
