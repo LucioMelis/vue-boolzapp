@@ -124,7 +124,7 @@
                     </div>
                 </div>
 
-                <!-- Blocco Nuovi Messaggi  -->
+                <!-- Blocco Input Nuovi Messaggi  -->
                 <div class="row text-center align-items-center lm-bg-newmessage py-3">
 
                     <div class="col-1">
@@ -134,8 +134,8 @@
                     <div class="col-10">
                         <div class="input-group">
                             <button @click="inserisciNuovoMessaggio(contacts[indiceContatto].messages)"
-                                class="btn btn-outline-secondary lm-btn" type="button"
-                                id="button-addon1">Button</button>
+                                class="btn btn-outline-secondary lm-btn" type="button" id="button-addon1"><i
+                                    class="fa-solid fa-paper-plane color-white"></i></button>
                             <input @keyUp.enter="inserisciNuovoMessaggio(contacts[indiceContatto].messages)"
                                 v-model="testoInserito" type="text" class="form-control"
                                 placeholder="Scrivi un messaggio" aria-label="Example text with button addon"
