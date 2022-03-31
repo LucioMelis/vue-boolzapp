@@ -217,7 +217,11 @@ const app = new Vue({
             this.contacts[this.indiceContatto].messages.push(rispondi);
         },
         utenteRicercato() {
-            console.log(this.ricercaUtente);
+            this.contacts.forEach(element => {
+                const nomi = element.name;
+                console.log(nomi)
+                element.visible = nomi.includes(this.ricercaUtente);
+            });
         }
     }
 })
