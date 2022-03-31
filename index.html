@@ -130,7 +130,8 @@
                     <!-- input chat  -->
                     <div class="col-10">
                         <div class="input-group">
-                            <button class="btn btn-outline-secondary lm-btn" type="button"
+                            <button @click="inserisciNuovoMessaggio(contacts[indiceContatto].messages)"
+                                class="btn btn-outline-secondary lm-btn" type="button"
                                 id="button-addon1">Button</button>
                             <input @keyUp.enter="inserisciNuovoMessaggio(contacts[indiceContatto].messages)"
                                 v-model="testoInserito" type="text" class="form-control"

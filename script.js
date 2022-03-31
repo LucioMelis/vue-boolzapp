@@ -205,9 +205,16 @@ const app = new Vue({
             }
             oggettoIndicizzato.push(nuovoMessaggio);
             this.testoInserito = '';
-        }
-
+            setTimeout(this.rispostaAlMessaggio, 1000);
+        },
+        rispostaAlMessaggio() {
+            const rispondi = {
+                date: '10/01/2020 15:51:00',
+                message: 'Ok, ci sentiamo domani!',
+                status: 'received'
+            }
+            this.contacts[this.indiceContatto].messages.push(rispondi);
+        },
     }
 })
-
 
