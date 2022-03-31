@@ -200,7 +200,7 @@ const app = new Vue({
         inserisciNuovoMessaggio(oggettoIndicizzato) {
             // console.log(oggettoIndicizzato);
             const nuovoMessaggio = {
-                date: '10/01/2020 15:51:00',
+                date: `10/01/2020 ${this.orarioLive()}`,
                 message: this.testoInserito,
                 status: 'sent'
             }
@@ -210,7 +210,7 @@ const app = new Vue({
         },
         rispostaAlMessaggio() {
             const rispondi = {
-                date: '10/01/2020 15:51:00',
+                date: `10/01/2020 ${this.orarioLive()}`,
                 message: 'Ok, ci sentiamo domani!',
                 status: 'received'
             }
@@ -222,7 +222,20 @@ const app = new Vue({
                 console.log(nomi)
                 element.visible = nomi.includes(this.ricercaUtente);
             });
+        },
+        ultimaDataOrario(oggettoMessaggi) {
+            return oggettoMessaggi[oggettoMessaggi.length - 1].date;
+        },
+        orarioMessaggi(messaggiIndicizzati) {
+            return messaggiIndicizzati.date.slice(11, 19);
+        },
+        orarioLive() {
+            let today = new Date();
+            let hh = String(today.getHours()).padStart(2, '0');
+            let mm = String(today.getMinutes()).padStart(2, '0');
+            let ss = String(today.getSeconds()).padStart(2, '0');
+            return today = hh + ':' + mm + ':' + ss;
         }
+
     }
 })
-

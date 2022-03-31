@@ -87,7 +87,7 @@
                     </div>
                     <!-- Orario Utente  -->
                     <div class="col-2 d-flex justify-content-end">
-                        <p class="text-secondary lm-p">12:00</p>
+                        <p class="text-secondary lm-p">{{ultimaDataOrario(contatti.messages)}}</p>
                     </div>
                 </div>
             </div>
@@ -120,6 +120,7 @@
                         <div class="lm-msg col-5" v-for="messaggi in contacts[indiceContatto].messages"
                             :class="aggiungiClasse(messaggi.status)">
                             {{visualizzaMessaggi(messaggi)}}
+                            <p class="d-flex justify-content-end">{{orarioMessaggi(messaggi)}}</p>
                         </div>
                     </div>
                 </div>
